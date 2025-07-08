@@ -71,10 +71,10 @@ class YouTubeService {
         description: channel.snippet?.description || "",
         customUrl: channel.snippet?.customUrl || "",
         publishedAt: channel.snippet?.publishedAt || "",
-        thumbnails: channel.snippet?.thumbnails || {
-          default: { url: "" },
-          medium: { url: "" },
-          high: { url: "" },
+        thumbnails: {
+          default: { url: channel.snippet?.thumbnails?.default?.url || "" },
+          medium: { url: channel.snippet?.thumbnails?.medium?.url || "" },
+          high: { url: channel.snippet?.thumbnails?.high?.url || "" },
         },
         statistics: {
           viewCount: channel.statistics?.viewCount || "0",
@@ -130,10 +130,10 @@ class YouTubeService {
           title: video.snippet?.title || "",
           description: video.snippet?.description || "",
           publishedAt: video.snippet?.publishedAt || "",
-          thumbnails: video.snippet?.thumbnails || {
-            default: { url: "" },
-            medium: { url: "" },
-            high: { url: "" },
+          thumbnails: {
+            default: { url: video.snippet?.thumbnails?.default?.url || "" },
+            medium: { url: video.snippet?.thumbnails?.medium?.url || "" },
+            high: { url: video.snippet?.thumbnails?.high?.url || "" },
           },
           statistics: {
             viewCount: video.statistics?.viewCount || "0",
@@ -141,7 +141,7 @@ class YouTubeService {
             commentCount: video.statistics?.commentCount || "0",
             favoriteCount: video.statistics?.favoriteCount || "0",
           },
-          tags: video.snippet?.tags,
+          tags: video.snippet?.tags || undefined,
           categoryId: video.snippet?.categoryId || "",
         })) || []
       );
@@ -182,10 +182,10 @@ class YouTubeService {
           title: video.snippet?.title || "",
           description: video.snippet?.description || "",
           publishedAt: video.snippet?.publishedAt || "",
-          thumbnails: video.snippet?.thumbnails || {
-            default: { url: "" },
-            medium: { url: "" },
-            high: { url: "" },
+          thumbnails: {
+            default: { url: video.snippet?.thumbnails?.default?.url || "" },
+            medium: { url: video.snippet?.thumbnails?.medium?.url || "" },
+            high: { url: video.snippet?.thumbnails?.high?.url || "" },
           },
           statistics: {
             viewCount: video.statistics?.viewCount || "0",
@@ -193,7 +193,7 @@ class YouTubeService {
             commentCount: video.statistics?.commentCount || "0",
             favoriteCount: video.statistics?.favoriteCount || "0",
           },
-          tags: video.snippet?.tags,
+          tags: video.snippet?.tags || undefined,
           categoryId: video.snippet?.categoryId || "",
         })) || []
       );
@@ -222,10 +222,10 @@ class YouTubeService {
           title: video.snippet?.title || "",
           description: video.snippet?.description || "",
           publishedAt: video.snippet?.publishedAt || "",
-          thumbnails: video.snippet?.thumbnails || {
-            default: { url: "" },
-            medium: { url: "" },
-            high: { url: "" },
+          thumbnails: {
+            default: { url: video.snippet?.thumbnails?.default?.url || "" },
+            medium: { url: video.snippet?.thumbnails?.medium?.url || "" },
+            high: { url: video.snippet?.thumbnails?.high?.url || "" },
           },
           statistics: {
             viewCount: video.statistics?.viewCount || "0",
@@ -233,7 +233,7 @@ class YouTubeService {
             commentCount: video.statistics?.commentCount || "0",
             favoriteCount: video.statistics?.favoriteCount || "0",
           },
-          tags: video.snippet?.tags,
+          tags: video.snippet?.tags || undefined,
           categoryId: video.snippet?.categoryId || "",
         })) || []
       );
