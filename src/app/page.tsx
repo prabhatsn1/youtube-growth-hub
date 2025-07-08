@@ -198,7 +198,7 @@ export default function Home() {
               </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Analyze your competitors' strategies and discover opportunities to
+              Analyze your competitors strategies and discover opportunities to
               outperform them.
             </p>
             <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
